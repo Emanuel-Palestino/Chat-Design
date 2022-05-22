@@ -1,0 +1,92 @@
+[
+	{
+		"id": 1,
+		"messages": [
+			{
+				"date": "22/05/2022",
+				"time": "15:41",
+				"content": "Hola ¿cómo estás?",
+				"readed": true
+			},
+			{
+				"date": "22/05/2022",
+				"time": "15:43",
+				"content": "Quieres ir a una fiesta mañana?",
+				"readed": false
+			}
+		]
+	},
+	{
+		"id": 2,
+		"messages": [
+			{
+				"date": "21/05/2022",
+				"time": "13:43",
+				"content": "Oye mandame tu parte de la tarea",
+				"readed": true
+			}
+		]
+	},
+	{
+		"id": 3,
+		"messages": [
+			{
+				"date": "20/05/2022",
+				"time": "15:00",
+				"content": "Oye, vas a venir a la casa?",
+				"readed": true
+			},
+			{
+				"date": "21/05/2022",
+				"time": "13:43",
+				"content": "Te preguntaba para saber qué vamos a comer",
+				"readed": false
+			}
+		]
+	},
+	{
+		"id": 4,
+		"messages": [
+			{
+				"date": "22/05/2022",
+				"time": "13:41",
+				"content": "Hola ¿cómo estás?",
+				"readed": false
+			},
+			{
+				"date": "22/05/2022",
+				"time": "13:43",
+				"content": "Quieres ir a una fiesta mañana?",
+				"readed": false
+			}
+		]
+	},
+	{
+		"id": 5,
+		"messages": [
+			{
+				"date": "20/04/2022",
+				"time": "10:33",
+				"content": "Te mando los reportes de actividades",
+				"readed": true
+			}
+		]
+	},
+	{
+		"id": 6,
+		"messages": [
+			{
+				"date": "22/05/2022",
+				"time": "13:41",
+				"content": "Hola ¿cómo estás?",
+				"readed": true
+			},
+			{
+				"date": "22/05/2022",
+				"time": "13:43",
+				"content": "Quieres ir a una fiesta mañana?",
+				"readed": false
+			}
+		]
+	}
+]

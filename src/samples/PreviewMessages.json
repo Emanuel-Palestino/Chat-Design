@@ -1,0 +1,62 @@
+[
+	{
+		"id": 1,
+		"unreadMessages": 1,
+		"lastMessage": {
+			"date": "22/05/2022",
+			"time": "15:43",
+			"content": "Quieres ir a una fiesta mañana?",
+			"readed": false
+		}
+	},
+	{
+		"id": 2,
+		"unreadMessages": 0,
+		"lastMessage": {
+			"date": "21/05/2022",
+			"time": "13:43",
+			"content": "Oye mandame tu parte de la tarea",
+			"readed": true
+		}
+	},
+	{
+		"id": 3,
+		"unreadMessages": 1,
+		"lastMessage": {
+			"date": "21/05/2022",
+			"time": "13:43",
+			"content": "Te preguntaba para saber qué vamos a comer",
+			"readed": false
+		}
+	},
+	{
+		"id": 4,
+		"unreadMessages": 2,
+		"lastMessage": {
+			"date": "22/05/2022",
+			"time": "13:43",
+			"content": "Quieres ir a una fiesta mañana?",
+			"readed": false
+		}
+	},
+	{
+		"id": 5,
+		"unreadMessages": 0,
+		"lastMessage": {
+			"date": "20/04/2022",
+			"time": "10:33",
+			"content": "Te mando los reportes de actividades",
+			"readed": true
+		}
+	},
+	{
+		"id": 6,
+		"unreadMessages": 1,
+		"lastMessage": {
+			"date": "22/05/2022",
+			"time": "13:43",
+			"content": "Quieres ir a una fiesta mañana?",
+			"readed": false
+		}
+	}
+]
