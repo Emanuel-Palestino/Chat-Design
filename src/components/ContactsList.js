@@ -7,7 +7,7 @@ const ContactsList = props => {
 			<div>
 				{
 					props.contacts.map(contact => (
-						<Contact contact={contact} previewMessages={props.previewMessages.find(msg => msg.id === contact.id)} key={contact.id} />
+						<Contact contact={contact} previewMessages={props.previewMessages.find(msg => msg.id === contact.id)} key={contact.id} id={contact.id} />
 					))
 				}
 			</div>

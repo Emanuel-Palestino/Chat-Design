@@ -1,9 +1,12 @@
+import { useChat } from "../context/ChatContext"
+
 const Contact = (props) => {
-	const { first_name, last_name, avatar } = props.contact
+	const { first_name, last_name, avatar, id } = props.contact
 	const { lastMessage, unreadMessages } = props.previewMessages
+	const { changeChat } = useChat()
 
 	return (
-		<div className="border-b border-gray-200 p-2 flex cursor-pointer hover:bg-gray-100">
+		<div className="border-b border-gray-200 p-4 flex cursor-pointer hover:bg-gray-100" onClick={() => changeChat(id)}>
 			<div className="flex-auto w-1/4">
 				<img className="h-14 w-14 rounded-full bg-blue-200" src={avatar} />
 			</div>
