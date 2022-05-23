@@ -2,7 +2,7 @@ import { useChat } from "../context/ChatContext"
 import { FaPaperPlane, FaSmile, FaPaperclip } from 'react-icons/fa'
 
 const Chat = () => {
-	const { chat } = useChat()
+	const { chat, contact } = useChat()
 
 	if (chat.id == undefined) {
 		return (
@@ -17,9 +17,9 @@ const Chat = () => {
 		<div className="h-full w-2/3 rounded-3xl bg-white p-6" >
 			<div className="w-full flex" >
 				<div className="basis-20">
-					<img className="h-16 w-16 rounded-full bg-blue-200" src="#" />
+					<img className="h-16 w-16 rounded-full bg-blue-200" src={contact.avatar} />
 				</div>
-				<div className="grow text-xl flex items-center">Contact Name</div>
+				<div className="grow text-xl flex items-center">{contact.first_name} {contact.last_name}</div>
 			</div>
 			<div className="w-full overflow-y-auto" style={{ height: 'calc(100% - 3rem - 4rem)' }}>
 				<div className="float-right w-fit max-w-[65%] min-h-[56px] bg-violet-700 p-5 rounded-l-xl rounded-b-xl text-white mb-2">

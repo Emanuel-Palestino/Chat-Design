@@ -6,13 +6,18 @@ export const useChat = () => useContext(ChatContext)
 
 export const ChatProvider = ({ children }) => {
 	const [ chat, setChat ] = useState({})
+	const [ contact, setContact ] = useState({})
 
 	const changeChat = id => {
 		setChat({id: id})
 	}
 
+	const changeContact = contact => {
+		setContact(contact)
+	}
+
 	return (
-		<ChatContext.Provider value={{ chat, changeChat }}>
+		<ChatContext.Provider value={{ chat, changeChat, contact, changeContact }}>
 			{children}
 		</ChatContext.Provider>
 	)
