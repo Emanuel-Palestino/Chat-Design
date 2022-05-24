@@ -8,8 +8,8 @@ export const ChatProvider = ({ children }) => {
 	const [ chat, setChat ] = useState({})
 	const [ contact, setContact ] = useState({})
 
-	const changeChat = id => {
-		setChat({id: id})
+	const changeChat = chat => {
+		setChat(chat)
 	}
 
 	const changeContact = contact => {

@@ -5,8 +5,11 @@ const Contact = (props) => {
 	const { lastMessage, unreadMessages } = props.previewMessages
 	const { changeChat, changeContact } = useChat()
 
-	const showChat = id => {
-		changeChat(id)
+	const showChat = async (id) => {
+		// Get message from contact id
+		const res = await fetch(`http://localhost:3000/api/messages/${id}`)
+		const data = await res.json()
+		changeChat(data)
 		changeContact(props.contact)
 	}
 
