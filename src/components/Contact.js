@@ -1,15 +1,16 @@
 import { useChat } from "../context/ChatContext"
 
-const Contact = (props) => {
+const Contact = props => {
 	const { first_name, last_name, avatar, id } = props.contact
 	const { lastMessage, unreadMessages } = props.previewMessages
-	const { changeChat, changeContact } = useChat()
+	const { changeChat, changeContact, changeMessages } = useChat()
 
 	const showChat = async (id) => {
 		// Get message from contact id
 		const res = await fetch(`http://localhost:3000/api/messages/${id}`)
 		const data = await res.json()
 		changeChat(data)
+		changeMessages(data.messages)
 		changeContact(props.contact)
 	}
 
