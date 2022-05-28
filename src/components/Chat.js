@@ -14,58 +14,17 @@ const Chat = () => {
 	}
 
 	return (
-		<div className="h-full w-2/3 rounded-3xl bg-white p-6" >
-			<div className="w-full flex" >
+		<div className="h-full w-2/3 rounded-3xl bg-white p-6 flex flex-col gap-2">
+			<div className="flex">
 				<div className="basis-20">
 					<img className="h-16 w-16 rounded-full bg-blue-200" src={contact.avatar} />
 				</div>
 				<div className="grow text-xl flex items-center">{contact.first_name} {contact.last_name}</div>
 			</div>
-			<div className="w-full overflow-y-auto" style={{ height: 'calc(100% - 3rem - 4rem)' }}>
-				<div className="float-right w-fit max-w-[65%] min-h-[56px] bg-violet-700 p-5 rounded-l-xl rounded-b-xl text-white mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje que yo envío
-					<div className="w-full text-gray-200 text-xs text-right">00:00</div>
-				</div>
 
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
+			<Messages messages={chat.messages} />
 
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
-				<div className="float-right w-fit max-w-[65%] min-h-[56px] bg-violet-700 p-5 rounded-l-xl rounded-b-xl text-white mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje que yo envío
-					<div className="w-full text-gray-200 text-xs text-right">00:00</div>
-				</div>
-
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
-
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
-				<div className="float-right w-fit max-w-[65%] min-h-[56px] bg-violet-700 p-5 rounded-l-xl rounded-b-xl text-white mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje que yo envío
-					<div className="w-full text-gray-200 text-xs text-right">00:00</div>
-				</div>
-
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
-
-				<div className="float-left w-fit max-w-[65%] min-h-[56px] bg-gray-200 p-5 rounded-r-xl rounded-b-xl text-gray-700 mb-2">
-					esto es un mensaje de prueba a ver qué pasa con el div. Este es un mensaje de la otra persona.
-					<div className="w-full text-gray-500 text-xs text-right">00:00</div>
-				</div>
-			</div>
-			<div className="w-full h-12 flex justify-around">
+			<div className="h-12 flex justify-around">
 				<form id="message" className="w-11/12">
 					<div className="bg-gray-200 h-12 w-full rounded-3xl flex justify-between">
 						<a className="w-12 h-12 rounded-full text-gray-500 flex items-center text-2xl p-[11px] cursor-pointer">
@@ -81,6 +40,24 @@ const Chat = () => {
 					<FaPaperPlane />
 				</button>
 			</div>
+		</div>
+	)
+}
+
+const Messages = props => {
+	return (
+		<div className="grow overflow-y-auto flex flex-col gap-2">
+			{
+				props.messages.map((message, i) => {
+					message.readed = true
+					return (
+						<div key={i} className={(message.me ? 'self-end bg-violet-700 rounded-l-xl text-white ' : 'self-start bg-gray-200 rounded-r-xl text-gray-700 ') + 'w-fit max-w-[65%] min-h-[56px] rounded-b-xl p-5'}>
+							{message.content}
+							<div className={(message.me ? 'text-gray-200 ' : 'text-gray-500 ') + 'w-full text-xs text-right'}>{message.time}</div>
+						</div>
+					)
+				})
+			}
 		</div>
 	)
 }

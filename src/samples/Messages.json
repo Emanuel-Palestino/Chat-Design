@@ -6,13 +6,22 @@
 				"date": "22/05/2022",
 				"time": "15:41",
 				"content": "Hola ¿cómo estás?",
-				"readed": true
+				"readed": true,
+				"me": false
+			},
+			{
+				"date": "22/05/2022",
+				"time": "15:42",
+				"content": "Bien gracias, y tu?",
+				"readed": true,
+				"me": true
 			},
 			{
 				"date": "22/05/2022",
 				"time": "15:43",
 				"content": "Quieres ir a una fiesta mañana?",
-				"readed": false
+				"readed": false,
+				"me": false
 			}
 		]
 	},
@@ -23,7 +32,15 @@
 				"date": "21/05/2022",
 				"time": "13:43",
 				"content": "Oye mandame tu parte de la tarea",
-				"readed": true
+				"readed": true,
+				"me": false
+			},
+			{
+				"date": "21/05/2022",
+				"time": "13:50",
+				"content": "Claro, en un momento te envío",
+				"readed": true,
+				"me": true
 			}
 		]
 	},
@@ -34,13 +51,22 @@
 				"date": "20/05/2022",
 				"time": "15:00",
 				"content": "Oye, vas a venir a la casa?",
-				"readed": true
+				"readed": true,
+				"me": false
 			},
 			{
 				"date": "21/05/2022",
 				"time": "13:43",
 				"content": "Te preguntaba para saber qué vamos a comer",
-				"readed": false
+				"readed": false,
+				"me": false
+			},
+			{
+				"date": "21/05/2022",
+				"time": "13:45",
+				"content": "claro, sólo que llegaré un poco tarde",
+				"readed": false,
+				"me": true
 			}
 		]
 	},
@@ -51,13 +77,22 @@
 				"date": "22/05/2022",
 				"time": "13:41",
 				"content": "Hola ¿cómo estás?",
-				"readed": false
+				"readed": false,
+				"me": false
 			},
 			{
 				"date": "22/05/2022",
 				"time": "13:43",
 				"content": "Quieres ir a una fiesta mañana?",
-				"readed": false
+				"readed": false,
+				"me": false
+			},
+			{
+				"date": "22/05/2022",
+				"time": "15:00",
+				"content": "Hola, gracias por la invitación pero no me siento muy bien de salud",
+				"readed": false,
+				"me": true
 			}
 		]
 	},
@@ -68,7 +103,15 @@
 				"date": "20/04/2022",
 				"time": "10:33",
 				"content": "Te mando los reportes de actividades",
-				"readed": true
+				"readed": true,
+				"me": false
+			},
+			{
+				"date": "20/04/2022",
+				"time": "10:35",
+				"content": "Claro, los reviso en seguida",
+				"readed": true,
+				"me": true
 			}
 		]
 	},
@@ -78,14 +121,23 @@
 			{
 				"date": "22/05/2022",
 				"time": "13:41",
-				"content": "Hola ¿cómo estás?",
-				"readed": true
+				"content": "Oye qué librería estás utilizando para resolver el problema?",
+				"readed": true,
+				"me": false
 			},
 			{
 				"date": "22/05/2022",
-				"time": "13:43",
-				"content": "Quieres ir a una fiesta mañana?",
-				"readed": false
+				"time": "13:50",
+				"content": "Una que encontré en la siguiente liga",
+				"readed": true,
+				"me": true
+			},
+			{
+				"date": "22/05/2022",
+				"time": "13:55",
+				"content": "Muchas gracias",
+				"readed": false,
+				"me": false
 			}
 		]
 	}
