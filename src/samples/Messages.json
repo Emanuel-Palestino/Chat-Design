@@ -93,6 +93,20 @@
 				"content": "Hola, gracias por la invitación pero no me siento muy bien de salud",
 				"readed": false,
 				"me": true
+			},
+			{
+				"date": "22/05/2022",
+				"time": "15:33",
+				"content": "Bueno, será en otra ocasión.",
+				"readed": false,
+				"me": false
+			},
+			{
+				"date": "22/05/2022",
+				"time": "15:33",
+				"content": "Que te mejores pronto.",
+				"readed": false,
+				"me": false
 			}
 		]
 	},

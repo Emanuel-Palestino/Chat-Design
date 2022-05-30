@@ -8,11 +8,11 @@ const Chat = () => {
 		document.getElementById(chatMessages.length - 1)?.scrollIntoView(false)
 	})
 
-	const { contact, chatMessages, changeMessages } = useChat()
+	const { contact, chatMessages, changeMessages, previewMessages, changePreview } = useChat()
 
 	if (chatMessages.length == 0) {
 		return (
-			<div className="h-full w-2/3 rounded-3xl bg-white p-6 flex justify-center items-center" >
+			<div className="h-full w-2/3 rounded-3xl bg-white flex justify-center items-center" >
 				<p className="text-3xl text-slate-500">Select a contact to start messaging</p>
 			</div>
 		)
@@ -23,6 +23,10 @@ const Chat = () => {
 		let form = document.getElementById('new-message')
 		let data = new FormData(form)
 		let date = new Date()
+
+		if (data.get('message') == '')
+			return
+
 		const newMessage = {
 			date: `${date.getDay()}/${date.getMonth() + 1}/${date.getFullYear()}`,
 			time: date.toTimeString().slice(0, 5),
@@ -31,7 +35,13 @@ const Chat = () => {
 			me: true
 		}
 
+		form.querySelector('input[name="message"]').value = ''
 		changeMessages([...chatMessages, newMessage])
+
+		const preview = previewMessages.find(msg => msg.id === contact.id)
+		preview.lastMessage = newMessage
+		preview.unreadMessages = 0
+		changePreview(previewMessages)
 	}
 
 	return (
@@ -57,7 +67,7 @@ const Chat = () => {
 						</a>
 					</div>
 				</form>
-				<button form="message" className="rounded-full bg-emerald-500 w-12 h-12 p-[11px] flex items-center text-2xl text-white">
+				<button form="new-message" className="rounded-full bg-emerald-500 w-12 h-12 p-[11px] flex items-center text-2xl text-white">
 					<FaPaperPlane />
 				</button>
 			</div>
